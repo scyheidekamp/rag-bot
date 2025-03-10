@@ -18,7 +18,7 @@ const openai = new OpenAI({
 
 const IGNORE_PREFIX = '!';
 const CHAT_CHANNELS = ['942424044790231070']; // Update with your chatbot channels
-const NEWS_CHANNEL_ID = '1320852592447848592'; // Update with your news updates channel
+const NEWS_CHANNEL_ID = '942424044790231070'; // Update with your news updates channel
 const HISTORY_FILE = 'shared_articles.json';
 const SOURCES = {
     rss: [
@@ -397,7 +397,7 @@ cron.schedule('0 9 * * *', () => {
 // **BOT STARTUP**
 client.once('ready', () => {
     console.log('The bot is online.');
-    postTopArticles(); // Run once on startup
+    // postTopArticles(); // Run once on startup
 });
 
 client.login(process.env.TOKEN);
